@@ -2,11 +2,13 @@ import { SafeAreaView, View, TextInput, Text, TouchableOpacity, Image } from 're
 import { Stack } from 'expo-router'
 import { useEffect, useState } from 'react' 
 import axios from 'axios'
+import { RAPIDAPI_KEY } from '@env'
 
 import styles from '../styles/globalStyles'
 import searchIcon from "../assets/search.png"
 
 const Home = () => {
+    const rapidApiKey = RAPIDAPI_KEY
     const [cityName, setCityName] = useState("")
     const [weatherData, setWeatherData] = useState(null)
     const [fetchWeather, setFetchWeather] = useState(false)
@@ -18,7 +20,7 @@ const Home = () => {
         url: 'https://weather-by-api-ninjas.p.rapidapi.com/v1/weather',
         params: {city: cityName, country: "Australia"},
         headers: {
-          'X-RapidAPI-Key': 'b9876600c5msh60a830f48fc8fd0p19c510jsn603d0941b873',
+          'X-RapidAPI-Key': rapidApiKey,
           'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
         }
     };
