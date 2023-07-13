@@ -1,14 +1,6 @@
-# Expo Router Example
+# Weather App
 
-Use [`expo-router`](https://expo.github.io/router) to build native navigation using files in the `app/` directory.
+Built using expo
+Run `npm start` to run the project in dev mode
 
-## 🚀 How to use
-
-```sh
-npx create-expo-app -e with-router
-```
-
-## 📝 Notes
-
-- [Expo Router: Docs](https://expo.github.io/router)
-- [Expo Router: Repo](https://github.com/expo/router)
+Uses APIs from Weather by API-Ninjas on rapidapi.com
